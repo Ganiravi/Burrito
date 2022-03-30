@@ -1,0 +1,91 @@
+/* Whole body background picture */
+body{
+	background-image:url("bg.jpg");
+	background-attachment:fixed;
+	background-blend-mode: lighten;
+	object-fit: fill;
+
+
+}
+
+/* Mr.Burritos heading alignment */
+#header {
+	float:left;
+	margin-left:5%;
+	font-family:"broadway";
+	color:#DC143C;
+	font-size:200%;
+	text-shadow: 2px 0px 6px white;
+	
+	}
+/* right side logo picture alignment  */
+#pic{
+	float:right;
+	margin-right:5%;
+	margin-top:1%;
+
+	}
+
+.mark{
+	font-size:30%;
+	}
+	
+  
+#scroll-text {
+  /* animation properties for scrolling */
+ 
+  transform: translateX(100%);
+  animation: my-animation 20s linear infinite;
+  margin-top:1%;
+  font-size:40px;
+  font-style:italic;
+  color:yellow;
+  clear:left;
+  padding-top:10px;
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+/* Order notification text */
+.head1 {
+	font-weight: bold;
+	font-size:60px;
+	font-style:italic;
+	text-align:center;
+	color:#7FFF00;
+	background-color:#ffffff;
+	opacity:0.9;
+	}
+/* for form postion and alignment */
+form {
+	position:relative;
+	border-radius: 20px;
+	max-width:440px;
+	background: #f2f2f2;
+	padding: 40px;
+	margin:auto;
+	font-size:20px;
+	font-weight:bold;
+	background-origin: content-box;
+	opacity: 0.9;
+	height:230px;
+
+	}
+	
+lable{
+	position:relative;
+	margin-left:100px;
+	}
+	
+#submit{
+	width:200px;
+	height:40px;
+	font-size:20px;
+	margin:auto;
+	}
+
+
+	

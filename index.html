@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset ="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- External Javascript file linked to ensure the login and calculation part-->
+	<script src="CA2JScript.js"></script>
+	
+	<title> 
+		Mr. Burrito's 🌯
+	</title>
+	<!-- External CSS file linked to ensure defined styling of the whole web page-->
+		<link rel="stylesheet" href="burritostyle.css"/>
+
+	
+</head>
+<body>
+	<div id="header"> <!-- Header tag containes with Burritos name and its logo with alignment-->
+		<h1> Welcome to Mr.Burrito's <sup class="mark"> TM </sup> 🌯</h1></div>
+		<img id="pic" src="logo.png" alt="burrito"/>
+		
+		<!-- Scrolling text to give information about 10% discount code to use-->
+		<div id="scroll-text"> Use the promo code <u>"MexTexGood"</u> to get 10% discount in your order</div> 
+		
+		<!-- Heading to notify to place a order-->
+		<p class="head1"><u> Fill the form for your Online Order </u></p>
+	
+	<div> <!-- Whole form comes under the DIV tag-->
+	<form onsubmit="return login();" method="post">
+		<table id="table1"> 	<!--Single table contains the form details to fill till end of submission-->
+			<tr>
+					<!--Requesting username to the start-->
+				<td> <label> Username: </label> </td>
+				<td> <input type = "text" placeholder="Type your username" name="username" size="30" id="username" maxlength="20"/> </td>
+			</tr>
+			
+			<tr>
+					<!-- Password masked with limited length of 9-->
+				<td> <label> Password: </label>  </td>
+				<td> <input type = "password" placeholder="Type your password" name="password" id="password" size="30" minlength="9" maxlength="9"/> 
+				</td>
+			</tr>
+					
+			<tr>
+					<!-- Drop down list selection on Burrito size and its price specified-->
+				<td> <label> Select Burrito Size: </label> </td>
+				<td> 
+					<select id="size" name="size" onchange="calcTotal()"> 
+						<option value ="0.00">--select size-- </option>
+						<option value="7.00"> Large (&euro; 7) </option>
+						<option value="9.00"> Extra-Large (&euro; 9) </option> 
+						<option value="17.50"> Supersize (&euro; 17.50) </option>
+					</select> 
+				</td>
+			</tr>
+			
+			<tr>
+					<!-- Number of Burritos to be selected using numbers tab-->
+				<td> <label> Number of Burrito's: </label> </td>
+				<td>
+					<input type = "number" name="quantity" id="quantity" max="50" min="0" onchange="calcTotal()"/> 
+				</td>
+			</tr>
+			
+			<tr>
+					<!-- Total from calcTotal() function in CA2Script.js file displayed-->
+				<td> <label> Your Total is: &nbsp; &nbsp; &nbsp; &#x20AC; </label> </td>
+				<td><input type="text" id="total" name="total" placeholder="0.00" size="30"> </td> 
+			</tr>
+			
+			<tr>
+					<!-- Allow to enter the discount code to add discount in to the final bill-->
+				<td> <label> Discount code: </label> </td>
+				<td> <input type = "text" name="discount" placeholder="Feed your discount code" id="discount" size="30" maxlength="10"/> 
+				</td>				
+			</tr>
+
+			<tr>
+					<!-- Final submit button-->
+				<th colspan="2"> <button type ="submit" id="submit" value="submit" onsubmit="login()"> Place your Order </button> </th>
+				
+			</tr>
+			
+		</table>
+	
+	</form>
+	</div>
+	
+
+	</body>
+</html>
